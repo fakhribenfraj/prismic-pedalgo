@@ -3,6 +3,7 @@
   "label": "Homepage",
   "repeatable": false,
   "status": true,
+  "format": "custom",
   "json": {
     "Main": {
       "title": {
@@ -27,7 +28,8 @@
         "config": {
           "choices": {
             "hero": { "type": "SharedSlice" },
-            "text": { "type": "SharedSlice" }
+            "text": { "type": "SharedSlice" },
+            "tickets_slice": { "type": "SharedSlice" }
           }
         }
       }

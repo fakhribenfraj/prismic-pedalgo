@@ -7,17 +7,17 @@ import { components } from "@/slices";
 
 export async function generateMetadata(): Promise<Metadata> {
   const client = createClient();
-  const page = await client.getSingle("homepage");
+  const page = await client.getSingle("home");
 
   return {
-    title: asText(page.data.title),
+    title: page.data.meta_title,
     description: page.data.meta_description,
   };
 }
 
 export default async function Home() {
   const client = createClient();
-  const page = await client.getSingle("homepage");
+  const page = await client.getSingle("home");
 
   return <SliceZone slices={page.data.slices} components={components} />;
 }

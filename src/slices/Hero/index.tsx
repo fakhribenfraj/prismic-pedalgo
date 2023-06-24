@@ -12,7 +12,7 @@ export type HeroProps = SliceComponentProps<Content.HeroSlice>;
  */
 const Hero = ({ slice }: HeroProps): JSX.Element => {
   return (
-    <section className="bg-slate-900 px-6 py-28 text-slate-300 md:px-10">
+    <section className="px-6 py-28 text-slate-900 md:px-10">
       <div className="mx-auto grid w-full max-w-5xl items-center gap-12 md:grid-cols-2 md:gap-20">
         <div className="grid gap-6">
           <PrismicRichText
@@ -49,7 +49,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
           field={slice.primary.image}
           sizes="100vw"
           priority={true}
-          className="w-full rounded-xl bg-slate-700"
+          className="w-full rounded-xl"
         />
       </div>
     </section>

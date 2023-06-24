@@ -16,8 +16,14 @@ export async function generateMetadata({
   params: Params;
 }): Promise<Metadata> {
   const client = createClient();
-  const page = await client.getByUID("page", params.uid);
-  const settings = await client.getSingle("settings");
+  let page;
+  let settings;
+  try {
+    page = await client.getByUID("page", params.uid);
+    settings = await client.getSingle("settings");
+  } catch (error) {
+    notFound();
+  }
 
   return {
     title: `${asText(page.data.title)} — ${asText(settings.data.site_title)}`,

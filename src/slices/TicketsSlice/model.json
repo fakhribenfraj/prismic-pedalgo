@@ -1,0 +1,45 @@
+{
+  "id": "tickets_slice",
+  "type": "SharedSlice",
+  "name": "TicketsSlice",
+  "description": "TicketsSlice",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "Text",
+          "config": { "label": "heading", "placeholder": "" }
+        },
+        "image": {
+          "type": "Image",
+          "config": { "label": "image", "constraint": {}, "thumbnails": [] }
+        }
+      },
+      "items": {
+        "heading": {
+          "type": "Text",
+          "config": { "label": "heading", "placeholder": "" }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "icon": {
+          "type": "Image",
+          "config": { "label": "icon", "constraint": {}, "thumbnails": [] }
+        }
+      }
+    }
+  ]
+}
